@@ -6,7 +6,7 @@ const Card = (props) => {
       {/* <img className="w-40 rounded-xl  mt-3 h-40 " src={props.img} alt="" /> */}
       <span className="text-yellow-400 font-bold mt-3">{props.name}</span>
       <p className="block m-2 p-2 text-yellow-50 text-justify">{props.designation}</p>
-      <p>Skills:{props.skills}</p>
+      <p className="block m-2 p-2 text-yellow-50 text-justify">Skills:{props.skills}</p>
       <p>{props.projects}</p>
     </div>
   );
