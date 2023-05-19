@@ -11,7 +11,7 @@ const Features = () => {
               key={employee.id}
               name={employee.name}
               designation={employee.designation}
-              skills={employee.skills}
+              skills={employee.skills.join(',')}
             />
           );
         })}
