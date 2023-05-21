@@ -6,7 +6,7 @@ import Employees from "../Data.json";
 const Filter = () => {
   const [isActive, setIsActive] = useState(false);
   const [filterTags, setFilterTags] = useState([]);
-  const [filterSkills, setFilterSkills] = useState("");
+  const [filterSkills, setFilterSkills] = useState([]);
 
   const filteredDATA = Employees.filter((node) =>
     filterTags.length > 0
@@ -26,6 +26,19 @@ const Filter = () => {
     }
   };
 
+  const handleFilterSkills = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setFilterSkills((prevSkills) => [...prevSkills, value]);
+    } else {
+      setFilterSkills((prevSkills) =>
+        prevSkills.filter((skill) => skill !== value)
+      );
+    }
+  };
+
+  
+
   return (
     <div className="relative flex ">
       <div className="m-2 p-2 " onClick={(e) => setIsActive(!isActive)}>
@@ -36,7 +49,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="SQL">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+             onChange={handleFilterSkills}
               value="SQL"
               id="SQL"
             />
@@ -45,7 +58,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="Javascript">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+                onChange={handleFilterSkills}
               value="Javascript"
               id="Javascript"
             />
@@ -54,7 +67,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="Python">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+                onChange={handleFilterSkills}
               value="Python"
               id="Python"
             />
@@ -63,7 +76,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="HTML">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+                onChange={handleFilterSkills}
               value="HTML"
               id="HTML"
             />
@@ -72,7 +85,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="CSS">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+                onChange={handleFilterSkills}
               value="CSS"
               id="CSS"
             />
@@ -81,7 +94,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="Photoshop">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+                onChange={handleFilterSkills}
               value="Photoshop"
               id="Photoshop"
             />
@@ -90,7 +103,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="Manual Testing">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+                onChange={handleFilterSkills}
               value="Manual Testing"
               id="Manual Testing"
             />
@@ -99,7 +112,7 @@ const Filter = () => {
           <label className="m-2" htmlFor="Java">
             <input
               type="checkbox"
-              //   onChange={filterHandler}
+                onChange={handleFilterSkills}
               value="Java"
               id="Java"
             />
