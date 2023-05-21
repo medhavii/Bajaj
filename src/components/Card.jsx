@@ -7,7 +7,7 @@ const Card = (props) => {
       <span className="text-yellow-400 font-bold mt-3">{props.name}</span>
       <p className="block m-2 p-2 text-yellow-50 text-justify">{props.designation}</p>
       <p className="block m-2 p-2 text-yellow-50 text-justify">Skills:{props.skills}</p>
-      <p>{props.projects}</p>
+     
     </div>
   );
 };
