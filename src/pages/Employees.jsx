@@ -6,7 +6,7 @@ const Features = () => {
   return (
     <div className="flex flex-col justify-center">
       <div className="flex justify-center">
-        <div className="w-40">
+        <div className="w-40 mt-8">
           Filter By Skills:
           <Filter />
         </div>
